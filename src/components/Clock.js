@@ -61,10 +61,10 @@ class Clock extends React.Component {
     // ====> Solve 1, (best practice)
     //      use arrow function 
 
-    handleClick = () => {
-        // console.log("Button was clicked")
+    handleClick = (locale) => {
+        console.log("Button was clicked")
         this.setState({
-            locale: "en-Us"
+            locale
         })
 
     }
@@ -91,8 +91,17 @@ class Clock extends React.Component {
 
 
     render() {
-        console.log("clock render");
+        // console.log("clock render");
         const { date, locale } = this.state
+
+        // let button;
+        // if (locale === 'bn-BD') {
+        //     button = <Button change={this.handleClick} locale="en-US">Click Here</Button>
+        // }
+        // else {
+        //     button = <Button change={this.handleClick} locale="bn-BD">Click Here</Button>
+        // }
+
 
         return (
             <div>
@@ -102,7 +111,7 @@ class Clock extends React.Component {
                 {/* <button onClick={this.handleClick.bind(this, "en-US")}>Click Here</button> */}
                 {/* <Button change={this.handleClick.bind(this, "en-US")}>Click Here</Button> */}
                 {/* <Button change={() => this.handleClick('en-US')}>Click Here</Button> */}
-                <Button change={this.handleClick} locale="en-US">Click Here</Button>
+                {locale === 'bn-BD' ? (<Button change={this.handleClick} locale="en-US" />) : (<Button change={this.handleClick} locale="bn-BD" />)}
             </div>
         );
     }
