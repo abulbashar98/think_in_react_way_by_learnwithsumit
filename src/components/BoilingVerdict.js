@@ -1,7 +1,7 @@
 import React from 'react';
 
-const BoilingVerdict = ({ temperature = 0 }) => {
-    if (temperature >= 100) {
+const BoilingVerdict = ({ celsius = 0 }) => {
+    if (celsius >= 100) {
         return <p>Water would Boil</p>
     }
     else {
