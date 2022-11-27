@@ -1,5 +1,6 @@
 import React from "react";
-import Calculator from "./components/Calculator";
+import Text from "./components/inheritance/Text";
+
 
 
 
@@ -8,9 +9,9 @@ import Calculator from "./components/Calculator";
 
 function App() {
 
-  return (
-    <div><Calculator /></div >
-  );
+  return <Text />
+
+
 }
 
 export default App;
