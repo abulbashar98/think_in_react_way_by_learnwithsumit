@@ -6,9 +6,6 @@ class Text extends Emoji {
         super(props)
     }
 
-
-
-
     render() {
 
         const decoratedText = this.addEmoji("I love Javascript", '💜')
