@@ -1,5 +1,8 @@
 import React from "react";
-import Text from "./components/inheritance/Text";
+import Bracket from "./components/Composition/Bracket";
+import Emoji from "./components/Composition/Emoji";
+import Text from "./components/Composition/Text";
+
 
 
 
@@ -9,7 +12,17 @@ import Text from "./components/inheritance/Text";
 
 function App() {
 
-  return <Text />
+  return (
+
+    <Emoji>
+      {({ addEmoji }) => (
+        <Bracket>
+          {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket}></Text>}
+        </Bracket>
+      )}
+    </Emoji>
+
+  );
 
 
 }
