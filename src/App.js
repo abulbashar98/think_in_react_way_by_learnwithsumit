@@ -18,6 +18,24 @@ export default class App extends React.Component {
     theme: 'dark'
   }
 
+  switchTheme = () => {
+
+    this.setState(({ theme }) => {
+      if (theme === 'dark') {
+        return {
+          theme: 'light'
+        }
+      }
+      else {
+        return {
+          theme: 'dark'
+        }
+      }
+    })
+
+  }
+
+
   render() {
     const { theme } = this.state;
     return (
@@ -29,11 +47,8 @@ export default class App extends React.Component {
               incrementCount={incrementCount}
             />)}
         </Counter>
-        <ThemeContext.Provider value={{ theme: theme }}><Section ></Section></ThemeContext.Provider>
+        <ThemeContext.Provider value={{ theme: theme, switchTheme: this.switchTheme }}><Section ></Section></ThemeContext.Provider>
 
-
-
-        <User name={(isLoggedIn) => isLoggedIn ? "Bashar" : "Guest"}></User>
       </>
     );
   }
