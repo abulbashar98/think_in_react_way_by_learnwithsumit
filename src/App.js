@@ -3,6 +3,7 @@ import ClickCounter from "./components/ClickCounter";
 import Counter from "./components/Counter";
 import Section from "./components/Section";
 import User from "./components/User";
+import ThemeContext from "./Contexts/themeContext";
 
 
 
@@ -28,7 +29,7 @@ export default class App extends React.Component {
               incrementCount={incrementCount}
             />)}
         </Counter>
-        <Provider value={ }><Section theme={theme}></Section></Provider>
+        <ThemeContext.Provider value={{ theme: theme }}><Section ></Section></ThemeContext.Provider>
 
 
 

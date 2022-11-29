@@ -1,18 +1,19 @@
 import React from 'react';
 import Counter from './Counter';
 import HoverCounter from './HoverCounter';
+import ThemeContext from '../Contexts/themeContext';
 
-const Content = ({ theme }) => {
+const Content = () => {
     return (
         <div>
             <h1>This is a Content</h1>
             <Counter>
                 {(count, incrementCount) => {
-                    return <Consumer>{({ value }) => <HoverCounter
+                    return <ThemeContext.Consumer>{({ theme }) => <HoverCounter
                         theme={theme}
                         count={count}
                         incrementCount={incrementCount}
-                    />}</Consumer>
+                    />}</ThemeContext.Consumer>
                 }}
             </Counter>
         </div>
