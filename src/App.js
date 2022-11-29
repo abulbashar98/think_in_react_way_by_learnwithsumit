@@ -1,7 +1,7 @@
 import React from "react";
 import ClickCounter from "./components/ClickCounter";
 import Counter from "./components/Counter";
-import HoverCounter from "./components/HoverCounter";
+import Section from "./components/Section";
 import User from "./components/User";
 
 
@@ -11,32 +11,29 @@ import User from "./components/User";
 
 
 
-function App() {
+export default class App extends React.Component {
 
-  return (
-    <>
-      <Counter>
-        {(count, incrementCount) => (
-          <ClickCounter
-            count={count}
-            incrementCount={incrementCount}
-          />)}
-      </Counter>
-      <Counter>
-        {(count, incrementCount) => (
-          <HoverCounter
-            count={count}
-            incrementCount={incrementCount}
-          />)}
-      </Counter>
+  state = {
+    theme: 'dark'
+  }
 
-
-
-      <User name={(isLoggedIn) => isLoggedIn ? "Bashar" : "Guest"}></User>
-    </>
-  );
+  render() {
+    const { theme } = this.state;
+    return (
+      <>
+        <Counter>
+          {(count, incrementCount) => (
+            <ClickCounter
+              count={count}
+              incrementCount={incrementCount}
+            />)}
+        </Counter>
+        <Provider value={ }><Section theme={theme}></Section></Provider>
 
 
+
+        <User name={(isLoggedIn) => isLoggedIn ? "Bashar" : "Guest"}></User>
+      </>
+    );
+  }
 }
-
-export default App;
