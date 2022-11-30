@@ -1,27 +1,23 @@
 import React from "react";
-import TodoFunctional from "./Components/TodoFunctional";
+import Counter from "./Components/Counter";
 
 
+function App() {
+
+  return <Counter></Counter>
 
 
-
-
-
-
-
-export default class App extends React.Component {
-
-
-
-
-  render() {
-
-    return (
-
-      <>
-        <TodoFunctional />
-      </>
-
-    )
-  }
 }
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
