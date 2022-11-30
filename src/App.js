@@ -1,9 +1,7 @@
 import React from "react";
-import ClickCounter from "./components/ClickCounter";
-import Counter from "./components/Counter";
-import Section from "./components/Section";
-import User from "./components/User";
-import ThemeContext from "./Contexts/themeContext";
+import Todo from "./Components/Todo";
+import TodoFunctional from "./Components/TodoFunctional";
+
 
 
 
@@ -40,17 +38,12 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <>
-        <Counter>
-          {(count, incrementCount) => (
-            <ClickCounter
-              count={count}
-              incrementCount={incrementCount}
-            />)}
-        </Counter>
-        <ThemeContext.Provider value={this.state}><Section ></Section></ThemeContext.Provider>
 
+      <>
+        <Todo />
+        <TodoFunctional />
       </>
-    );
+
+    )
   }
 }
