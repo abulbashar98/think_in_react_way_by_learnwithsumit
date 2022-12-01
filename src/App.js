@@ -1,10 +1,15 @@
 import React from "react";
-import Counter from "./Components/Counter";
+import MyComponentFunctional from "./Components/MyComponentFunctional";
+
 
 
 function App() {
 
-  return <Counter></Counter>
+  return (
+    <>
+      <MyComponentFunctional></MyComponentFunctional>
+    </>
+  );
 
 
 }
