@@ -15,10 +15,17 @@ const MyComponentFunctional = () => {
 
     useEffect(() => {
         console.log("Timer Rendered");
-        setInterval(tick, 1000)
+        const interval = setInterval(tick, 1000)
+
+        // clean up Function comes with useEffect
+        return () => {
+            console.log('Component Unmounted');
+            clearInterval(interval)
+        }
     }, [])
 
     const tick = () => {
+        console.log('clock Ticking');
         setDate(new Date())
     }
 

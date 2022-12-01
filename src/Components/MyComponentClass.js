@@ -12,12 +12,16 @@ export default class MyComponentClass extends React.Component {
     componentDidMount() {
         const { count } = this.state;
         document.title = `Clicked ${count} times`;
-        setInterval(this.tick, 1000)
+        this.interval = setInterval(this.tick, 1000)
     }
 
     componentDidUpdate() {
         const { count } = this.state;
         document.title = `Clicked ${count} times`
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval)
     }
 
     tick = () => {
