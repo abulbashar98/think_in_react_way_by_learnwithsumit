@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Input = () => {
+const Input = ({ type, placeholder }, ref) => {
     return (
         <div>
-
+            <input ref={ref} type={type} placeholder={placeholder} />
         </div>
     );
 };
 
-export default Input;
+const forwardedRef = React.forwardRef(Input)
+
+export default forwardedRef;
