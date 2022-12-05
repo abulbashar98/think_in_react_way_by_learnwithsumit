@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMemo } from "react";
 import { useCallback } from "react";
 import Button from "./Components/Button";
 import ShowCount from "./Components/ShowCount";
@@ -11,6 +12,15 @@ function App() {
 
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
+
+
+  const isEvenOrOdd = useMemo(() => {
+    for (let i = 0; i < 1000000000; i++) {
+
+    }
+    return count1 % 2 === 0;
+
+  }, [count1])
 
 
   //  This is when Call Back uses a Dependency,depends on a global variable 
@@ -35,6 +45,7 @@ function App() {
     <>
       <Title title="(React.memo) (useCallback) and (useMemo) Tutorial" />
       <ShowCount title="Counter 1" count={count1} />
+      <p>{isEvenOrOdd ? "Even" : "Odd"}</p>
       <Button incrementCount={incrementByOne}>Increment By One</Button>
       <hr />
       <Title></Title>
