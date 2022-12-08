@@ -1,5 +1,6 @@
 import React from "react";
-import Time from "./Components/Time";
+import Counter from "./Components/Counter";
+
 
 
 
@@ -9,7 +10,7 @@ function App() {
 
 
 
-  return <Time></Time>
+  return <Counter></Counter>
 
 
 }
