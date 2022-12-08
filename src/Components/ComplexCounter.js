@@ -1,12 +1,13 @@
 import React from 'react';
 import { useReducer } from 'react';
 
-// array.prototype.reduce() take initialValue 
+// array.prototype.reduce() ---> initialValue 
 const initialState = {
     counter: 0,
     counter2: 0
 };
 
+// array.prototype.reduce() ----> reducer(accumulator, currentValue)
 const reducer = (state, action) => {
 
     switch (action.type) {
@@ -28,6 +29,8 @@ const reducer = (state, action) => {
 
 const ComplexCounter = () => {
 
+    // array.prototype.reduce() ----> singleValue Return
+    // useState Hook -----> [state, setState]
     const [count, dispatch] = useReducer(reducer, initialState);
 
     return (

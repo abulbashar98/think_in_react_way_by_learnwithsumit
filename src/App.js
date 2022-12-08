@@ -1,5 +1,5 @@
 import React from "react";
-import ComplexCounter from "./Components/ComplexCounter";
+import MultipleUseOfReducer from "./Components/MultipleUseOfReducer";
 
 
 
@@ -11,7 +11,7 @@ function App() {
 
 
 
-  return <ComplexCounter></ComplexCounter>
+  return <MultipleUseOfReducer></MultipleUseOfReducer>
 
 
 }
