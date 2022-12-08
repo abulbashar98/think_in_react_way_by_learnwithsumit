@@ -1,5 +1,6 @@
 import React from "react";
-import Counter from "./Components/Counter";
+import ComplexCounter from "./Components/ComplexCounter";
+
 
 
 
@@ -10,7 +11,7 @@ function App() {
 
 
 
-  return <Counter></Counter>
+  return <ComplexCounter></ComplexCounter>
 
 
 }
