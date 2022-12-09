@@ -1,14 +1,16 @@
 import React from "react";
-import GetPostWithUseReducer from "./Components/GetPostWithUseReducer";
-// import GetPostWithUseState from "./Components/GetPostWithUseState";
+// import LayoutComponentOne from "./Components/LayoutComponentOne";
+import LayoutComponentTwo from "./Components/LayoutComponentTwo";
+
 
 
 
 
 function App() {
 
-  // return <GetPostWithUseState></GetPostWithUseState>
-  return <GetPostWithUseReducer />
+
+  // return <LayoutComponentOne />
+  return <LayoutComponentTwo />
 
 }
 
