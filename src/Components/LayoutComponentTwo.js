@@ -1,6 +1,6 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useEffect } from 'react';
+// import { useState } from 'react';
 import useWindowResize from '../hooks/useWindowResize';
 
 const LayoutComponentTwo = () => {
@@ -22,7 +22,7 @@ const LayoutComponentTwo = () => {
 
     //===> Use Custom hook instead...
 
-    const onSmallScreen = useWindowResize();
+    const onSmallScreen = useWindowResize(600);
 
     return (
         <div className={onSmallScreen ? "small" : "large"}>
