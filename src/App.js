@@ -1,6 +1,6 @@
 import React from "react";
-// import LayoutComponentOne from "./Components/LayoutComponentOne";
-import LayoutComponentTwo from "./Components/LayoutComponentTwo";
+import Logo from "./Components/Logo";
+import '../src/Assets/CSS/global.css'
 
 
 
@@ -9,8 +9,12 @@ import LayoutComponentTwo from "./Components/LayoutComponentTwo";
 function App() {
 
 
-  // return <LayoutComponentOne />
-  return <LayoutComponentTwo />
+  return (
+    <div className="App">
+      <h1>Learn With Sumit</h1>
+      <Logo />
+    </div>
+  );
 
 }
 
