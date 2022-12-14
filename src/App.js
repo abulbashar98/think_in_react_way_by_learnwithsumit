@@ -1,6 +1,7 @@
 import React from "react";
-import Logo from "./Components/Logo";
-import '../src/Assets/CSS/global.css'
+import './Assets/CSS/dark.css'
+import Tutorial from "./Components/Tutorial";
+
 
 
 
@@ -9,12 +10,7 @@ import '../src/Assets/CSS/global.css'
 function App() {
 
 
-  return (
-    <div className="App">
-      <h1>Learn With Sumit</h1>
-      <Logo />
-    </div>
-  );
+  return <Tutorial />
 
 }
 
