@@ -6,7 +6,8 @@ import Content from './Content';
 // import Tag from './Tag';
 import { CardContainer, ContentContainer, ButtonsContainer } from './Styles/Container.styles';
 import { Tag, H1, P, Image } from './Styles/Elements.styles'
-
+import Title from './Title';
+import { StyledTitle } from './Styles/Custom.styles';
 
 const Card = () => {
     return (
@@ -14,7 +15,12 @@ const Card = () => {
             <ContentContainer>
                 <Tag color="#4361ee">EXCLUSIVE</Tag>
 
-                <H1>React Styled Components</H1>
+                {/* <H1>
+                    <Title text="React Styled Components"></Title>
+                </H1> */}
+                <H1>
+                    <StyledTitle text="React Styled Components" color="cyan"></StyledTitle>
+                </H1>
                 <P>
                     Exclusive React JS Tutorial on Styled Components where you will learn why we need this & how to use it.
                 </P>
