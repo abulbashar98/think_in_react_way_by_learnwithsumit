@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import Container from './Container';
+import { Container } from './Styles/Container.styles';
 
 const Tutorial = () => {
     return (
