@@ -74,3 +74,11 @@ export const ButtonsContainer = styled.div`
     }
 `;
 
+export const SwitchContainer = styled.div`
+    position: absolute;
+    width: 35%;
+    bottom: 0;
+    left: 33%;
+    right: 33%;
+`;
+

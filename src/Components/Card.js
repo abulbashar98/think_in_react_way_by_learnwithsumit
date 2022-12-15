@@ -4,12 +4,22 @@ import Button from './Button';
 import Content from './Content';
 // import Image from './Image';
 // import Tag from './Tag';
-import { CardContainer, ContentContainer, ButtonsContainer } from './Styles/Container.styles';
+import { CardContainer, ContentContainer, ButtonsContainer, switchContainer, SwitchContainer } from './Styles/Container.styles';
 import { Tag, H1, P, Image } from './Styles/Elements.styles'
 import Title from './Title';
 import { StyledTitle } from './Styles/Custom.styles';
+import '../Assets/CSS/switch.css'
+import { useContext } from 'react';
+import { toggleContext } from '../App';
+import { useTheme } from 'styled-components';
+import Input from './Input';
+
 
 const Card = () => {
+
+    const { isDarkTheme, toggleTheme } = useContext(toggleContext);
+    const theme = useTheme();
+
     return (
         <CardContainer>
             <ContentContainer>
@@ -30,7 +40,14 @@ const Card = () => {
                 </ButtonsContainer>
             </ContentContainer>
             <Image src={nerdImage} alt="Nerd" width="300px" />
+            <SwitchContainer>
+                <label className='toggle-switch'>
+                    <Input type="checkbox" checked={isDarkTheme} onChange={toggleTheme}></Input>
+                    <span className='switch' />
+                </label>
+            </SwitchContainer>
         </CardContainer>
+
     );
 };
 
